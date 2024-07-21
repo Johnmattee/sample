@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tech Goals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 data-testid="slackDisplayName">squid</h1>
+        <div class="image-container">
+            <img src="john.jpg" alt="Slack Profile Picture" data-testid="slackProfilePicture" class="profile-picture">
+        </div>
+        
+        <div class="time-info">
+            <p data-testid="currentTimeUTC">Current Time (UTC): <span id="timeUTC"></span></p>
+            <p data-testid="currentDay">Current Day: <span id="dayOfWeek"></span></p>
+            <p data-testid="slackEmail">ajayitaiwojohnmatt@gmail.com</p>
+        </div>
+        
+        <h2>My tech goals for the next two years</h2>
+        <ul class="goals-list">
+            <li>Master full-stack development.</li>
+            <li>Contribute to open-source projects.</li>
+            <li>Build and deploy my own web applications.</li>
+            <li>Stay updated with the latest tech trends and tools.</li>
+            <li>Network with other professionals in the tech industry.</li>
+        </ul>
+
+        <div class="links">
+            <a href="https://hng.tech/learn" data-testid="hngLink" target="_blank">HNG Learn</a>
+            <a href="https://keyword.dog" data-testid="keywordLink" target="_blank">Keyword Dog</a>
+            <a href="https://scrapeanyweb.site" data-testid="scrapeanywebLink" target="_blank">Scrape Any Web</a>
+        </div>
+    </div>
+
+    <script>
+        function updateTimeAndDay() {
+            const now = new Date();
+            document.getElementById('timeUTC').textContent = now.toUTCString().split(' ')[4];
+            document.getElementById('dayOfWeek').textContent = now.toLocaleString('en-US', { weekday: 'long' });
+        }
+        updateTimeAndDay();
+        setInterval(updateTimeAndDay, 1000);
+    </script>
+</body>
+</html>

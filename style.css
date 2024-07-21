@@ -1,0 +1,105 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #f3e7e9, #e3eeff);
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+.image-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 20px auto;
+    border: 5px solid #007BFF;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h1 {
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.time-info {
+    background: #f7f7f7;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.time-info p {
+    margin: 0.5em 0;
+    color: #555;
+}
+
+h2 {
+    margin-top: 2em;
+    color: #007BFF;
+}
+
+.goals-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.goals-list li {
+    background: #f0f8ff;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    color: #333;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2em;
+}
+
+.links a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    .links {
+        flex-direction: column;
+    }
+
+    .links a {
+        margin: 10px 0;
+    }
+}
